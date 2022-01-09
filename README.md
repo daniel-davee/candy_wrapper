@@ -1,6 +1,8 @@
-#Candy Wrapper 
-Candy Wrapper is a "sticky" wrapper for any object, which adds syntax surgar.
-#Usage
+# Candy Wrapper
+Candy Wrapper is a "sticky" wrapper for any object, which adds syntax surgar. \n
+
+## Usage
+
 ```python
 from candy_wrapper.candy_wrapper import Wrapper
 foo = SomeClass()
