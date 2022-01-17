@@ -4,7 +4,7 @@ Candy Wrapper is a "sticky" wrapper for any object, which adds syntax surgar.
 ## Usage
 
 ```python
-from candy_wrapper.candy_wrapper import Wrapper
+from candy.candy_wrapper import Wrapper
 foo = SomeClass()
 candy = Wrapper(foo)
 foo['bar'] = 42
