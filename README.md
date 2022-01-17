@@ -1,5 +1,5 @@
 # Candy Wrapper
-Candy Wrapper is a "sticky" wrapper for any object, which adds syntax surgar. \n
+Candy Wrapper is a "sticky" wrapper for any object, which adds syntax surgar.
 
 ## Usage
 
