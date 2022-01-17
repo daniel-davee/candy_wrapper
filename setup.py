@@ -2,15 +2,15 @@ from setuptools import setup, find_packages
 
 
 VERSION = '0.0.1'
-DESCRIPTION = 'answers yes or no questions'
+DESCRIPTION = 'A sweet wrapper that lets object act js objects'
 LONG_DESCRIPTION = '''
-                    Should be used in debug string to see if certain
-                    conditions are met. Useful in f strings.
+                    Wraps python object in a wrapper which allows attributes 
+                    to be added like keys to a dict. 
                    '''
 
 # Setting up
 setup(
-    name="yes_or_no",
+    name="candy_wrapper",
     version=VERSION,
     author="magedavee (Daniel Davee)",
     author_email="<daniel.v.davee@gmail.com>",
@@ -18,7 +18,7 @@ setup(
     long_description_content_type="text/markdown",
     long_description=LONG_DESCRIPTION,
     packages=find_packages(),
-    install_requires=[],
+    install_requires=['yes_or_no'],
     keywords=['python', 'debug'],
     classifiers=[
         "Development Status :: 1 - Planning",
