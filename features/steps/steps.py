@@ -6,6 +6,7 @@ logger = Logger('behave')
 logger.set_log_file_basename(__name__)
 logger.set_minimum_level(logger.logLevels['debug'])
 
+
 @given(u'foo = Wrapper(\'foo\')')
 def step_impl(context):
     context.foo = Wrapper('foo')
