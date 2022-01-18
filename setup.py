@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 
-VERSION = '0.0.1'
+VERSION = '0.0.2'
 DESCRIPTION = 'A sweet wrapper that lets object act js objects'
 LONG_DESCRIPTION = '''
                     Wraps python object in a wrapper which allows attributes 
