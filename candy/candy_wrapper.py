@@ -13,10 +13,6 @@ obj_keys = {'', '_obj'}
 class Wrapper(dict):
     
     """
-    This wrapper wraps any object, and give the ability
-    to add attributes to the object like a dictionary,
-    much in the same way that pandas dataframs work.
-
     from candy_wrapper.candy_wrapper import Wrapper
     foo = SomeClass()
     candy = Wrapper(foo)
@@ -39,7 +35,11 @@ class Wrapper(dict):
         else:super().__init__()
     
     def __call__(self,*args, **kwargs) -> Any:
-        
+        """
+        This allows for the unwrapping the objest. It will return either the 
+        Returns:
+            Any: _description_
+        """        
         debug_msg = f"""
                         What is {self._obj=}?
                         What is{self['']=}?
