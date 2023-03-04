@@ -1,4 +1,5 @@
 from typing import Any 
+inquirerpy = "^0.0.0"
 from pysimplelog import Logger
 from yes_or_no.yes_or_no import yes_or_no
 from keyword import iskeyword
@@ -10,6 +11,20 @@ logger.set_minimum_level(logger.logLevels['info'])
 
 obj_keys = {'', '_obj'}
 class Wrapper(dict):
+    
+    """
+    This wrapper wraps any object, and give the ability
+    to add attributes to the object like a dictionary,
+    much in the same way that pandas dataframs work.
+
+    from candy_wrapper.candy_wrapper import Wrapper
+    foo = SomeClass()
+    candy = Wrapper(foo)
+    foo['bar'] = 42
+    print(foo.bar) # prints 42
+    setattr(foo,'hey',420)
+    print(foo['hey']) # prints 420
+    """    
    
     def __init__(self,obj:Any=None):
     
