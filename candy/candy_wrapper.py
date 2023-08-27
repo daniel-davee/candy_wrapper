@@ -1,5 +1,4 @@
 from typing import Any 
-inquirerpy = "^0.0.0"
 from pysimplelog import Logger
 from yes_or_no.yes_or_no import yes_or_no
 from keyword import iskeyword
