@@ -8,7 +8,7 @@ logger.set_log_file_basename(__name__)
 # logger.set_minimum_level(logger.logLevels['debug'])
 logger.set_minimum_level(logger.logLevels['info'])
 
-obj_keys = {'', '_obj'}
+obj_keys:set[str] = {'', '_obj'}
 class Wrapper(dict):
     
     """
@@ -25,13 +25,19 @@ class Wrapper(dict):
     
         debug_msg = f"""
                         What is {obj=}?
-                        What is {bool(obj)}?
-                        What is {type(obj)}?
+                        What is {bool(obj)=}?
+                        What is {type(obj)=}?
                         """
         logger.debug(debug_msg)
         self[''] = obj
-        if isinstance(obj,dict): super().__init__(self[''])
-        else:super().__init__()
+        match(obj):
+            case dict():
+                obj:dict = obj 
+                super().__init__(obj)
+                for key,value in obj.items():
+                    self[key] = value
+            case _:
+                super().__init__()
     
     def __call__(self,*args, **kwargs) -> Any:
         """
