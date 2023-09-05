@@ -21,7 +21,7 @@ class Wrapper(dict):
     print(foo['hey']) # prints 420
     """    
    
-    def __init__(self,obj:Any=None):
+    def __init__(self,obj:Any=None,recursive:bool=True):
     
         debug_msg = f"""
                         What is {obj=}?
@@ -31,7 +31,7 @@ class Wrapper(dict):
         logger.debug(debug_msg)
         self[''] = obj
         match(obj):
-            case dict():
+            case dict() if recursive:
                 obj:dict = obj 
                 super().__init__(obj)
                 for key,value in obj.items():
